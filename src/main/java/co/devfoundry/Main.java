@@ -16,17 +16,13 @@ public class Main {
         BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
 
         HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
-        smallHouseDirector.buildHouse();
+        House smallHouse = smallHouseDirector.buildHouse();
 
         HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
-        bigHouseDirector.buildHouse();
-
-        House smallHouse = smallHouseDirector.getHouse();
-        House bigHouse = bigHouseDirector.getHouse();
+        House bigHouse = bigHouseDirector.buildHouse();
 
         System.out.println(smallHouse);
         System.out.println(bigHouse);
 
     }
-
 }
